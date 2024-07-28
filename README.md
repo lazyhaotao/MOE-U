@@ -1,5 +1,5 @@
 # MetaOE-L
-Python implement of MetaOE-L for few-shot HSI classification.
+Python implement of the MOE-U. 
 
 ## File Description
 - dataDes/
@@ -13,5 +13,12 @@ Python implement of MetaOE-L for few-shot HSI classification.
 - find_bestlr_normal_HSI.py: find out the best learning rates for human-designed optimizers
 - fit_ensemble_test.py: meta-optimizer ensemble for test
 - model.py: predictive models
-- optimizer2: network structure of meta-optimizers
-- 
+- optimizer2.py: network structure of meta-optimizers
+- TEST_LSTMO_AVERAGE_HSI.py: test the performance of the MOE-A (meta-optimizer ensemble with the average method)
+- TEST_LSTMO_ENSEMBLE_HSI.py: test the performance of the MOE-U (meta-optimizer ensemble with the proposed update integration algorithm)
+- TEST_LSTMO_HSI.py: test the performance of the LSTM optimizer
+- TEST_normal_HSI.py: test the performance of the humand-designed optimizers
+- tools.py: some tools for processing the datasets
+- train_LSTMoptimizer.py: train the LSTM optimizer
+- train_meta_optimizer_ensemble.py: train a meta-optimizer ensemble
+- utils.py: gradients normalization and generating HSI data for training the meta-optimizers
