@@ -1,5 +1,5 @@
 # MetaOE-L
-Python implement of the MOE-U. 
+Python implement of the MOE-U, a meta-optimizer ensemble for few-shot hyperspectral image classification. 
 
 ## File Description
 - dataDes/
@@ -22,3 +22,8 @@ Python implement of the MOE-U.
 - train_LSTMoptimizer.py: train the LSTM optimizer
 - train_meta_optimizer_ensemble.py: train a meta-optimizer ensemble
 - utils.py: gradients normalization and generating HSI data for training the meta-optimizers
+
+We reference and use some of the code in the following repositories, thanks！
+> https://github.com/szubing/ED-DMM-UDA/blob/master/datasets/hyperXDatas.py
+> https://github.com/kostagiolasn/MetaLearning-MScThesis/blob/master/MetaLearning.ipynb
+
