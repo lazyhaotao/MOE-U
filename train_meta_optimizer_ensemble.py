@@ -121,8 +121,7 @@ def fit(optimizer_network, meta_optimizer, optimizee_obj_function, optimizee_net
             cell_states = cell_states2     
     return losses_list
 def main_loop(OptimizerNetwork, optimizee_obj_function, optimizee_network, preprocessing = True,
-        epochs = 500, iterations_to_optimize = 100, iterations_to_unroll = 20,
-        n_tests = 5, lr = 0.001, out_mul = 0.1, T_0=100, T_mult=1, lr_min = 1e-5):
+        epochs = 500, iterations_to_optimize = 100, iterations_to_unroll = 20,  lr = 0.001, out_mul = 0.1, T_0=200, T_mult=1, lr_min = 1e-5):
     
     optimizer_network = w(OptimizerNetwork(preprocessing = preprocessing))
     # To construct an Optimizer you need to give it an iterable containing the parameters to optimize
@@ -140,7 +139,6 @@ def main_loop(OptimizerNetwork, optimizee_obj_function, optimizee_network, prepr
         scheduler.step(eop_epo+1)
         #meta_optimizer.param_groups[0]['lr'] = lr - meta_optimizer.param_groups[0]['lr']
         lr_next = meta_optimizer.param_groups[0]['lr']
-        #学习率突然升高标志
         if (lr_next - lr_present)>0.5*lr:
             #####################################################################################################################################
             torch.save(optimizer_network.state_dict(), '../EnsembleOptimizerPth/Ensemble_LSTMOptimizer_PaviaC_lr'+str(lr)+'episode'+str(eop_epo)+'.pth')
@@ -151,4 +149,4 @@ if __name__ == '__main__':
     USE_CUDA  = True
     ##########################################################################################################################################
     for lr in [0.01]:
-        main_loop(OptimizerNetwork, HSIUtil, GenericNeuralNetforPaviaC, lr = lr, preprocessing=True, n_tests=5, epochs=700, out_mul = 0.1,T_0=100, T_mult=1)
+        main_loop(OptimizerNetwork, HSIUtil, GenericNeuralNetforPaviaC, lr = lr, preprocessing=True, epochs=700, out_mul = 0.1,T_0=200, T_mult=1)
