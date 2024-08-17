@@ -1,5 +1,8 @@
 # MetaOE-L
-Python implement of the MOE-U, a meta-optimizer ensemble for few-shot hyperspectral image classification. 
+The code for the paper "Few-Shot Hyperspectral Remote Sensing Image Classification
+via an Ensemble of Meta-Optimizers with Update Integration". [pdf](https://www.mdpi.com/2072-4292/16/16/2988/pdf)
+
+Citation: Hao, T.; Zhang, Z.; Crabbe, M.J.C. Few-Shot Hyperspectral Remote Sensing Image Classification via an Ensemble of Meta-Optimizers with Update Integration. Remote Sens. 2024, 16, 2988. https://doi.org/10.3390/rs16162988
 
 ## File Description
 - dataDes/
