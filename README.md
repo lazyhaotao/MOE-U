@@ -1,4 +1,4 @@
-# MetaOE-L
+# MOE-U
 The code for the paper "Few-Shot Hyperspectral Remote Sensing Image Classification
 via an Ensemble of Meta-Optimizers with Update Integration". [pdf](https://www.mdpi.com/2072-4292/16/16/2988/pdf)
 
