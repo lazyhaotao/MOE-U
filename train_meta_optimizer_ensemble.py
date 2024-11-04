@@ -140,9 +140,7 @@ def main_loop(OptimizerNetwork, optimizee_obj_function, optimizee_network, prepr
         #meta_optimizer.param_groups[0]['lr'] = lr - meta_optimizer.param_groups[0]['lr']
         lr_next = meta_optimizer.param_groups[0]['lr']
         if (lr_next - lr_present)>0.5*lr:
-            #####################################################################################################################################
             torch.save(optimizer_network.state_dict(), '../EnsembleOptimizerPth/Ensemble_LSTMOptimizer_PaviaC_lr'+str(lr)+'episode'+str(eop_epo)+'.pth')
-    ##最后再保存一次模型###############################################################################################################################
     torch.save(optimizer_network.state_dict(), '../EnsembleOptimizerPth/Ensemble_LSTMOptimizer_PaviaC_lr'+str(lr)+'episode'+str(eop_epo)+'.pth')
 
 if __name__ == '__main__':
